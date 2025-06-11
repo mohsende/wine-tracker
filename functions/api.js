@@ -1,5 +1,7 @@
 export async function onRequest(context) {
-  return new Response("✅ Worker is working!");
+  return new Response("✅ Worker is working!", {
+    headers: { "content-type": "text/plain" },
+  });
   // const { request, env } = context;
 
   // const kv = env.WINE_TRACKER_KV;
