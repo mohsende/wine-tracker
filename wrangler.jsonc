@@ -1,0 +1,11 @@
+{
+  "name": "wine-tracker-api",
+  "compatibility_date": "2025-06-11",
+  "pages_build_output_dir": "./dist",
+  "kv_namespaces": [
+    {
+      "binding": "WINE_TRACKER_KV",
+      "id": "57b54a63fcd6417d9a7150df452072ae"
+    }
+  ]
+}
