@@ -1,19 +1,17 @@
 export async function onRequest(context) {
-  return new Response("✅ Worker is working!", {
-    headers: { "content-type": "text/plain" },
-  });
-  // const { request, env } = context;
+  // return new Response("✅ Worker is working!");
+  const { request, env } = context;
 
-  // const kv = env.WINE_TRACKER_KV;
+  const kv = env.WINE_TRACKER_KV;
 
   // // مثلا GET /api?key=somekey
-  // const url = new URL(request.url);
-  // const key = url.searchParams.get("key");
+  const url = new URL(request.url);
+  const key = url.searchParams.get("key");
 
   // if (request.method === "GET" && key) {
   //   const value = await kv.get(key);
   //   return new Response(value || "Not Found", { status: value ? 200 : 404 });
   // }
 
-  // return new Response("Method Not Allowed", { status: 405 });
+  return new Response("Method Not Allowed"+ kv + url + key, { status: 405 });
 }
